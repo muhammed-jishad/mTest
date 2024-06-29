@@ -1,0 +1,26 @@
+**auth jwt**
+
+curl -X POST http://localhost/MTest/oauth2/token -H 'content-type: application/json' -H 'accept: application/json' -d '{"client_id":"test","client_secret":"00112233-test-4455-jishad-6677-jishad-8899-aabbccdtest","grant_type":"client_credentials"}'
+
+
+**Login**
+curl -X GET http://localhost/MTest/login -H 'content-type: application/json' -H 'accept: application/json' -H 'X-TEST-CLIENT-ID:test' -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk0MDU2OTAsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTcxOTQxMjg5MCwidXNlcklkIjoxfQ.XZn73zo-05rTitRSFPMeIRKJ8cGWPo9DRRdjHdgP17E' -d '{"username":"admin@gmail.com","password":"admin"}'
+
+**Register**
+
+curl -X POST http://localhost/MTest/register -H 'content-type: application/json' -H 'accept: application/json' -H 'X-TEST-CLIENT-ID:test' -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk0NzE5NzYsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTcxOTQ3OTE3NiwidXNlcklkIjoxfQ.-cM8LyCpFhlVV0LHj4hA9b5j_Ld2bXbxx3Bv8va5eRo' -d '{"username":"shad","password":"admin","email":"sha@gmail.com"}'
+
+**Get User**
+
+curl -X GET http://localhost/MTest/users -H 'content-type: application/json' -H 'accept: application/json' -H 'X-TEST-CLIENT-ID:test' -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk1NzM3ODAsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTcxOTU4MDk4MCwidXNlcklkIjoxfQ.4RpOhh6HLew9kTbkcxvyIQG1DMvJPcdhn-rfBmaPSMU'
+
+**Update**
+curl -X POST http://localhost/MTest/updateuser -H 'content-type: application/json' -H 'accept: application/json' -H 'X-TEST-CLIENT-ID:test' -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk0NzE5NzYsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTcxOTQ3OTE3NiwidXNlcklkIjoxfQ.-cM8LyCpFhlVV0LHj4hA9b5j_Ld2bXbxx3Bv8va5eRo' -d '{"username":"shad","password":"1234","email":"sha@gmail.com","uid":"2"}'
+
+**Delete**
+curl -X POST http://localhost/MTest/deleteuser -H 'content-type: application/json' -H 'accept: application/json' -H 'X-TEST-CLIENT-ID:test' -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk0NzE5NzYsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTcxOTQ3OTE3NiwidXNlcklkIjoxfQ.-cM8LyCpFhlVV0LHj4hA9b5j_Ld2bXbxx3Bv8va5eRo' -d '{"uid":"2"}'
+
+**Get Transaction**
+curl -X GET http://localhost/MTest/gettransaction -H 'content-type: application/json' -H 'accept: application/json' -H 'X-TEST-CLIENT-ID:test' -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk0ODk3NTEsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTcxOTQ5Njk1MSwidXNlcklkIjoxfQ.j7Ofm270MQDmqqy_fOsE4TXECcdk0ICG90hHz8YjfY8'
+
+

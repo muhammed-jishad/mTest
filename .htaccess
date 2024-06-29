@@ -1,0 +1,23 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /MTest/
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+ErrorDocument 404 /notfound.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# BLOCK FOR API  
+RewriteRule ^oauth2/token$ index.php?name=generateToken [QSA,L]
+RewriteRule ^login$ index.php?name=Login [QSA,L]
+RewriteRule ^register$ index.php?name=Register [QSA,L]
+RewriteRule ^users$ index.php?name=getUser [QSA,L]
+RewriteRule ^updateuser$ index.php?name=Updateuser [QSA,L]
+RewriteRule ^deleteuser$ index.php?name=Deleteuser [QSA,L]
+RewriteRule ^gettransaction$ index.php?name=getSecurityTransactions [QSA,L]
+
+# BLOCK FOR API ENDS 
+
+
+
